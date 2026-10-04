@@ -25,12 +25,6 @@ Run the second command from the project that should receive the guide, and adjus
 
 The `--plugin-dir` flag loads the plugin for that session only. To load it every time, add the flag to a shell alias, or add the repository to a plugin marketplace and install it with `/plugin install aws-docs-style@<marketplace>`.
 
-To check the plugin before loading it:
-
-```
-claude plugin validate ./claude-aws-style
-```
-
 ## What `/install-style` does
 
 It copies `STYLE.md` to the project root and appends a short "Writing style" section to the project's `CLAUDE.md`. If a `STYLE.md` already exists and differs, the skill shows a diff and asks before overwriting. Pass a path to install somewhere else: `/install-style docs/STYLE.md`.
