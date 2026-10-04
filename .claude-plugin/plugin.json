@@ -1,0 +1,15 @@
+{
+  "name": "aws-docs-style",
+  "version": "0.1.0",
+  "description": "Installs a STYLE.md that captures the writing patterns of AWS service documentation: definition-first openings, one idea per sentence, terms defined once, graded callouts, numbered procedures, and flat statements of limits.",
+  "author": {
+    "name": "Elon Demirock"
+  },
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "technical-writing",
+    "style-guide",
+    "clarity"
+  ]
+}
