@@ -13,29 +13,27 @@ A Claude Code plugin that installs a `STYLE.md` writing guide into your project.
 
 ## Installing the plugin
 
-**For one session.** Run Claude Code with the plugin directory:
+Clone the repository, start Claude Code with the plugin directory, and run the install skill inside your project:
 
 ```
-claude --plugin-dir /path/to/aws-docs-style
-```
-
-**Validate first.**
-
-```
-claude plugin validate /path/to/aws-docs-style
-```
-
-**From a marketplace.** Add an entry to a marketplace `marketplace.json` whose `source` points at this directory, then install with `/plugin install aws-docs-style@<marketplace>`.
-
-## Installing the guide into a project
-
-After the plugin is loaded, open the project and run:
-
-```
+git clone git@github.com:elon-owner/claude-aws-style.git
+claude --plugin-dir ./claude-aws-style
 /install-style
 ```
 
-This copies `STYLE.md` to the project root and appends a short "Writing style" section to the project's `CLAUDE.md`. If a `STYLE.md` already exists and differs, the skill shows a diff and asks before overwriting. Pass a path to install somewhere else: `/install-style docs/STYLE.md`.
+Run the second command from the project that should receive the guide, and adjust the path to wherever you cloned the repository.
+
+The `--plugin-dir` flag loads the plugin for that session only. To load it every time, add the flag to a shell alias, or add the repository to a plugin marketplace and install it with `/plugin install aws-docs-style@<marketplace>`.
+
+To check the plugin before loading it:
+
+```
+claude plugin validate ./claude-aws-style
+```
+
+## What `/install-style` does
+
+It copies `STYLE.md` to the project root and appends a short "Writing style" section to the project's `CLAUDE.md`. If a `STYLE.md` already exists and differs, the skill shows a diff and asks before overwriting. Pass a path to install somewhere else: `/install-style docs/STYLE.md`.
 
 ## How the guide was built
 
