@@ -35,12 +35,6 @@ claude plugin validate ./claude-aws-style
 
 It copies `STYLE.md` to the project root and appends a short "Writing style" section to the project's `CLAUDE.md`. If a `STYLE.md` already exists and differs, the skill shows a diff and asks before overwriting. Pass a path to install somewhere else: `/install-style docs/STYLE.md`.
 
-## How the guide was built
-
-Six research agents each read ten pages of AWS documentation, five overview pages and five capability pages, for EC2, Application Load Balancer, Aurora, Aurora PostgreSQL, VPC, and RDS. Each agent reported on openings, sentence structure, terminology, page structure, callouts, procedures, limits and pricing, cross-references, and what the pages avoid. The reports agreed on nearly every point. `STYLE.md` is the intersection.
-
-One deliberate change: the source pages separate a bold list term from its description with a spaced dash. The guide uses a colon or a period instead, because many house styles forbid dashes in prose.
-
 ## License
 
 MIT
